@@ -1,10 +1,9 @@
 const Home = () => (
   <div className="container mx-auto">
-    <h1 className="text-xl">Página</h1>
-    <span className="text-gray-500">{Home.pageTitle}</span>
+    index.js
   </div>
 );
 
-Home.pageTitle = "Home";
+Home.pageTitle = "index";
 
 export default Home;
