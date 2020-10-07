@@ -7,27 +7,7 @@ import { useRouter } from "next/router";
 
 import '../styles/tailwind.css';
 
-const Header = props => (
-  <div className="bg-black px-4 pt-5 pb-16 flex justify-between items-center">
-    <div className="flex justify-between items-center">
-      <img className="rounded-md h-12 w-12 object-cover" src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/9e/9e1c7583dc792a199ae3ac2e15e6b91e64badae1_full.jpg"></img>
-      <div className="flex flex-col ml-3">
-        <div className="flex">
-          <span className="text-white text-lg">crash</span><span className="text-white font-bold text-lg">unix</span>
-          <button className="ml-1">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-chevron-down text-white"><polyline points="6 9 12 15 18 9" /></svg>
-          </button>
-        </div>
-        <span className="text-gray-300 text-xs">Juan Macário</span>
-      </div>
-    </div>
-    <button>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-bell text-gray-600"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" /><path d="M13.73 21a2 2 0 0 1-3.46 0" /></svg>
-    </button>
-  </div>
-);
-
-const BottomTabs = props => {
+const BottomTabs = () => {
   const router = useRouter();
   return (
     <div className="bg-black px-4">
@@ -68,12 +48,9 @@ const App = ({ Component, pageProps }) => (
       <title>Steam Redesign</title>
     </Head>
     <div className="flex flex-col h-screen">
-      <header>
-        <Header />
-      </header>
-      <div className="flex-1">
+      <main className="flex-1 overflow-scroll">
         <Component {...pageProps} />
-      </div>
+      </main>
       <footer>
         <BottomTabs></BottomTabs>
       </footer>
