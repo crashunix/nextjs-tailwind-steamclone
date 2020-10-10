@@ -48,10 +48,10 @@ const App = ({ Component, pageProps }) => (
       <title>Steam Redesign</title>
     </Head>
     <div className="flex flex-col h-screen">
-      <main className="flex-1 overflow-scroll">
+      <main className="flex-1 bg-black overflow-scroll">
         <Component {...pageProps} />
       </main>
-      <footer>
+      <footer className="sticky bottom-0">
         <BottomTabs></BottomTabs>
       </footer>
     </div>
