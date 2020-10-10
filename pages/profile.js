@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 import { BsThreeDotsVertical } from "react-icons/bs";
-import ActivityGameCard from "../components/ActivityGameCard";
+import ActivityGameCard, { ActivityGameCardSkeleton } from "../components/ActivityGameCard";
 import Card from "../components/Card";
 import FullCard from "../components/FullCard";
 
@@ -136,7 +136,7 @@ const Profile = () => {
               </button>
             </div>
           </Card>
-          <Card title="Friends" value="368">
+          <Card animDelay={0.2}  title="Friends" value="368">
             <div className="grid grid-cols-3 gap-2 mt-3">
               <button className="bg-gray-800 rounded-lg">
                 <img
@@ -161,13 +161,13 @@ const Profile = () => {
               </button>
             </div>
           </Card>
-          <Card title="Screenshots" value="1248"></Card>
-          <Card title="Artworks" value="1"></Card>
+          <Card animDelay={0.4}  title="Screenshots" value="1248"></Card>
+          <Card animDelay={0.6}  title="Artworks" value="1"></Card>
         </div>
 
         <div className="grid grid-cols-1 gap-3">
-          <Card title="Games" value="58"></Card>
-          <Card title="Groups" value="39">
+          <Card animDelay={0.1}  title="Games" value="58"></Card>
+          <Card animDelay={0.3}  title="Groups" value="39">
             <div className="grid grid-cols-3 gap-2 mt-3">
               <button className="bg-gray-800 rounded-lg">
                 <img
@@ -192,8 +192,8 @@ const Profile = () => {
               </button>
             </div>
           </Card>
-          <Card title="Inventory" value="161"></Card>
-          <Card title="Groups" value="39">
+          <Card animDelay={0.5}  title="Inventory" value="161"></Card>
+          <Card animDelay={0.7}  title="Groups" value="39">
             <div className="grid grid-cols-3 gap-2 mt-3">
               <button className="bg-gray-800 p-1 rounded-lg">
                 <img
@@ -305,6 +305,7 @@ const Profile = () => {
               game="Portal 2"
               achievement="4"
             />
+            <ActivityGameCardSkeleton />
           </div>
         </FullCard>
       </div>

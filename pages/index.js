@@ -114,7 +114,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="px-4 py-5 bg-black">
+      <div className="px-4 py-5">
         <p className="text-white font-normal mb-4">Confirmations</p>
         <div className="bg-gray-900 px-4 py-6 rounded-lg">
           <div className="w-1/2">
@@ -125,7 +125,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="py-4 bg-black">
+      <div className="py-4">
         <FullCard
           left={<span className="text-white font-medium">Today's Deals</span>}
           right={
