@@ -5,6 +5,8 @@ import ActivityGameCard from "../components/ActivityGameCard";
 import Card from "../components/Card";
 import FullCard from "../components/FullCard";
 
+import { motion } from "framer-motion";
+
 const Header = (props) => (
   <div className="px-4 py-5">
     <div className="flex justify-end items-center">
@@ -67,50 +69,42 @@ const Profile = () => {
       <header>
         <Header user={user} />
       </header>
-      <div className="px-4 py-2">
-        <nav className="flex mb-2">
+      <div className="px-4 pt-2 pb-4">
+        <nav className="flex mb-2 relative">
           <a
             href="#"
             onClick={() => setCurrentTab("tab1")}
-            className="text-sm text-gray-600 w-1/3"
+            className="text-sm text-gray-600 w-20 pb-1"
           >
             Statistics
-            <div
-              className={
-                currentTab == "tab1"
-                  ? "h-1 w-6 rounded-md bg-blue-400 mt-2"
-                  : "hidden"
-              }
-            ></div>
           </a>
           <a
             href="#"
             onClick={() => setCurrentTab("tab2")}
-            className="text-sm text-gray-600 w-1/3"
+            className="text-sm text-gray-600 w-20 pb-1"
           >
             Activity
-            <div
-              className={
-                currentTab == "tab2"
-                  ? "h-1 w-6 rounded-md bg-blue-400 mt-2"
-                  : "hidden"
-              }
-            ></div>
           </a>
           <a
             href="#"
             onClick={() => setCurrentTab("tab3")}
-            className="text-sm text-gray-600 w-1/3"
+            className="text-sm text-gray-600 w-20 pb-1"
           >
             Comments
-            <div
-              className={
-                currentTab == "tab3"
-                  ? "h-1 w-6 rounded-md bg-blue-400 mt-2"
-                  : "hidden"
-              }
-            ></div>
           </a>
+          <motion.div
+            initial={{
+              x: 0
+            }}
+            animate={{
+              x: currentTab == 'tab2' ? '5rem' : currentTab == 'tab3' ? '10rem' : 0,
+            }}
+            transition={{
+              type: "spring",
+              damping: 15
+            }}
+            className={"absolute left-0 h-1 w-6 rounded-md bg-blue-400 bottom-0"}
+          ></motion.div>
         </nav>
       </div>
 
