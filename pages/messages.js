@@ -1,7 +1,10 @@
-const Messages = () => (
-  <div className="container mx-auto">
-    Mensagens
-  </div>
+import HeaderNotification from '../components/HeaderNotification';
+
+const Messages = props => (
+  <>
+    <header>
+    </header>
+  </>
 );
 
 Messages.pageTitle = "index";
